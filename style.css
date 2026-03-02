@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: "Courier New", monospace;
+}
+
+.terminal {
+    padding: 20px;
+    min-height: 100vh;
+    color: #00bfff;
+}
+
+.banner {
+    color: #00bfff;
+    font-size: 14px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prompt {
+    color: #00bfff;
+    margin-right: 8px;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Welcome Text */
+.welcome-green {
+    color: #93df1a;
+}
+
+/* Default Output */
+.output-line {
+    margin: 5px 0;
+    white-space: pre-wrap;
+    color: #87cefa; /* light blue */
+}
+
+/* User Typed Command */
+.command {
+    color: #ffffff;
+}
+
+/* cat command output */
+.cat-output {
+    color: #00ff66; /* terminal green */
+}
+
+/* Help command names */
+.help-command {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Help description */
+.help-desc {
+    color: #aaaaaa;
+}
+
+/* Error */
+.error {
+    color: #ff4d4d;
+}
