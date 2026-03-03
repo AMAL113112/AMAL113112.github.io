@@ -44,8 +44,9 @@ input {
 /* Default Output */
 .output-line {
     margin: 5px 0;
-    white-space: pre-wrap;
-    color: #87cefa; /* light blue */
+    white-space: pre;        
+    overflow-x: auto;        
+    color: #87cefa;          
 }
 
 /* User Typed Command */
@@ -55,7 +56,7 @@ input {
 
 /* cat command output */
 .cat-output {
-    color: #00ff66; /* terminal green */
+    color: #00ff66;          
 }
 
 /* Help command names */
