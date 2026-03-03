@@ -2,13 +2,13 @@ const input = document.getElementById("commandInput");
 const output = document.getElementById("output");
 
 const sections = {
-about: 
+about:
 `Full Stack Java Developer with hands-on experience building scalable,
 database-driven web applications using Java, Spring Boot, Hibernate, JSP,
 Servlets, JDBC, and Python (Django). Strong command of MVC architecture,
 ORM-based persistence, and RESTful API design, with practical exposure to MySQL-backed systems.`,
-    
-    technical: `Backend:
+
+technical: `Backend:
 - Java (17+)
 - Spring Boot
 - Hibernate (JPA)
@@ -17,7 +17,7 @@ ORM-based persistence, and RESTful API design, with practical exposure to MySQL-
 -------------------------------------------
 Database:
 - MySQL
-- SQL (Joins, Constraints, Indexes)
+- MongoDB
 -------------------------------------------
 Frontend:
 - HTML5, CSS3, JavaScript
@@ -27,7 +27,7 @@ Tools:
 - Git, GitHub
 - Apache Tomcat`,
 
-    projects: `1. Car Wash Management System
+projects: `1. Car Wash Management System
    Built a service booking and management system using Java, Servlets, JDBC and MySQL.
    Implemented customer registration, service scheduling, billing and full CRUD operations.
 ---------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ Tools:
    Implemented authentication, product management, shopping cart and order processing.
    Used layered architecture with REST APIs and ORM-based persistence.`,
 
-    internship: `Java Spring-Boot Full Stack Intern
+internship: `Java Spring-Boot Full Stack Intern
 Luminar Technolab, Kochi
 --------------------------
 Duration: 6 Months
@@ -51,16 +51,26 @@ Duration: 6 Months
 - Built REST APIs and improved database interaction efficiency.
 - Gained hands-on experience in Git, debugging and clean code practices.`,
 
-    contact: `Email: amalal113112@gmail.com
+contact: `Email: amalal113112@gmail.com
 LinkedIn: www.linkedin.com/in/amal-nv`
 };
 
 function printOutput(text, className = "") {
-    const line = document.createElement("div");
-    line.classList.add("output-line");
-    if (className) line.classList.add(className);
-    line.textContent = text;
-    output.appendChild(line);
+
+    const lines = text.split("\n");
+
+    lines.forEach(lineText => {
+        const line = document.createElement("div");
+        line.classList.add("output-line");
+
+        if (className) {
+            line.classList.add(className);
+        }
+
+        line.textContent = lineText;
+        output.appendChild(line);
+    });
+
     window.scrollTo(0, document.body.scrollHeight);
 }
 
@@ -68,7 +78,9 @@ input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
 
         const command = input.value.trim();
+
         printOutput(`root@amal:~# ${command}`, "command");
+
         input.value = "";
 
         if (command === "ls") {
@@ -93,19 +105,11 @@ input.addEventListener("keydown", function (e) {
 
         else if (command === "help") {
 
-            printOutput("Available commands:\n");
-
-            printOutput("ls", "help-command");
-            printOutput("  → List sections\n", "help-desc");
-
-            printOutput("cat <section>", "help-command");
-            printOutput("  → View section (example: cat about)\n", "help-desc");
-
-            printOutput("clear", "help-command");
-            printOutput("  → Clear terminal\n", "help-desc");
-
-            printOutput("help", "help-command");
-            printOutput("  → Show this message\n", "help-desc");
+            printOutput("Available commands:");
+            printOutput("ls  → List sections", "help-desc");
+            printOutput("cat <section>  → View section (example: cat about)", "help-desc");
+            printOutput("clear  → Clear terminal", "help-desc");
+            printOutput("help  → Show this message", "help-desc");
         }
 
         else if (command === "clear") {
@@ -120,8 +124,4 @@ input.addEventListener("keydown", function (e) {
             printOutput(`${command}: command not found`, "error");
         }
     }
-
 });
-
-
-
