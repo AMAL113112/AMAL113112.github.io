@@ -2,10 +2,9 @@ const input = document.getElementById("commandInput");
 const output = document.getElementById("output");
 
 const sections = {
-    about: `I am a Full Stack Developer with hands-on experience designing and developing scalable database-driven web applications using Java, Spring Boot, Hibernate, JSP, Servlets, JDBC, Python and Django.
-I have a strong understanding of MVC architecture, ORM-based persistence and RESTful API development.
-I focus on writing clean, maintainable code and delivering production-ready solutions.
-And yes — I debug before I panic.`,
+    about: `Full Stack Java Developer with hands-on experience building scalable, database-driven web applications using 
+    Java, Spring Boot, Hibernate, JSP, Servlets, JDBC, and Python (Django). Strong command of MVC architecture, ORM-based 
+    persistence, and RESTful API design, with practical exposure to MySQL-backed systems.`,
 
     technical: `Backend:
 - Java (17+)
@@ -39,7 +38,7 @@ Tools:
    Implemented authentication, product management, shopping cart and order processing.
    Used layered architecture with REST APIs and ORM-based persistence.`,
 
-    internship: `Java Spring Full Stack Intern
+    internship: `Java Spring-Boot Full Stack Intern
 Luminar Technolab, Kochi
 --------------------------
 Duration: 6 Months
@@ -119,4 +118,5 @@ input.addEventListener("keydown", function (e) {
             printOutput(`${command}: command not found`, "error");
         }
     }
+
 });
