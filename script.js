@@ -2,10 +2,12 @@ const input = document.getElementById("commandInput");
 const output = document.getElementById("output");
 
 const sections = {
-    about: `Full Stack Java Developer with hands-on experience building scalable, database-driven web applications using 
-    Java, Spring Boot, Hibernate, JSP, Servlets, JDBC, and Python (Django). Strong command of MVC architecture, ORM-based 
-    persistence, and RESTful API design, with practical exposure to MySQL-backed systems.`,
-
+    about: `Full Stack Java Developer with hands-on experience building scalable,
+database-driven web applications using Java, Spring Boot, Hibernate, JSP,
+Servlets, JDBC, and Python (Django).
+Strong command of MVC architecture, ORM-based persistence, and RESTful API
+design, with practical experience working with MySQL-backed systems.`,
+    
     technical: `Backend:
 - Java (17+)
 - Spring Boot
@@ -120,3 +122,4 @@ input.addEventListener("keydown", function (e) {
     }
 
 });
+
